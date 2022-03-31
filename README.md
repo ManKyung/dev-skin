@@ -1,2 +1,2 @@
-# dev-skin
-Tistory skin manage
+# Tistory Skin
+Dev skin
