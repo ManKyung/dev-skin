@@ -193,19 +193,15 @@ a:active {
   border: 1px solid rgba(230, 230, 230, 1);
   border-radius: 20px;
   width: 200px;
-  padding: 4px;
 }
-
-.item:nth-child(3) > .search-div {
+.search-wrap > .search-div {
   display: inline-block;
 }
-
-.item:nth-child(3) > .search-icon {
+.search-wrap > .search-icon {
   padding: 7px 7px 6px 8px;
   display: block;
 }
-
-.item:nth-child(3) > .search-input {
+.search-wrap > .search-input {
   border: none;
   outline: none;
   font-size: 14px;
@@ -213,7 +209,9 @@ a:active {
   margin-right: 20px;
   width: 200px;
   padding: 8px 0 11px;
-  color: rgba(41, 41, 41, 1);
+  color: rgb(255, 255, 255);
+  background: black;
+  border: none;
 }
 
 /* 모바일 가로 화면 */
