@@ -1,2 +1,2 @@
 # Tistory Skin
-Dev skin
+[Demo](https://devskin.tistory.com/)
