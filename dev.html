@@ -7,39 +7,62 @@
       content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"
     />
     <title>[##_page_title_##]</title>
-    <link rel="stylesheet" href="./dev.css" />
+    <link rel="stylesheet" href="./style.css" />
     <script src="//t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script>
   </head>
 
   <body>
     <div class="wrap">
       <div class="container">
-        <div class="item">1</div>
         <div class="item">
-          <header>Headasdfasdfadsfaser</header>
-          <div class="post">
-            <h1>
-              제목입니다. 제목입니다. 제목입니다. 제목입니다. 제목입니다.
-              제목입니다.
-            </h1>
-            <p>
-              한글입니다.한글입니다.한글입니다.한글입니다.한글입니다.한글입니다.한글입니다.한글입니다.한글입니다.한글입니다.한글입니다.한글입니다.한글입니다.한글입니다.한글입니다.한글입니다.한글입니다.한글입니다.
-            </p>
-            <h2>카테고리 2소제목</h2>
-            <p>
-              English English English English English English English English
-              English English English English English English English English
-              English English English English English English English English
-              English
-            </p>
-            <h3>카테고리 3소제목</h3>
-            <p>
-              English English English English English English English English
-              English English English English English English English English
-              English English Engliddh English English English English English
-              English
-            </p>
+          <div class="profile">
+            <img
+              style="height: auto"
+              alt="Avatar"
+              width="260"
+              height="260"
+              class="avatar avatar-user width-full border color-bg-default"
+              src="https://avatars.githubusercontent.com/u/6177160?v=4"
+            />
+            <div class="profile-info">
+              <div class="title">[##_title_##]</div>
+              <div class="description">[##_desc_##]</div>
+            </div>
+            <button class="btn" href="#">
+              <span>Follow</span>
+            </button>
+            <div class="link">
+              <div class="link-item">
+                <a href="https://github.com/ManKyung" target="_blank"
+                  >https://github.com/ManKyung</a
+                >
+              </div>
+              <div class="link-item">
+                <a href="https://github.com/ManKyung" target="_blank"
+                  >https://devskin.tistory.com</a
+                >
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="item">
+          <s_article_rep>
+            <s_permalink_article_rep>
+              <header>
+                [##_article_rep_author_##] 2022.04.01. 09:14
+                <a href="[##_s_ad_m_link_##]" class="link_detail">수정</a>
+                <a href="#" onclick="[##_s_ad_d_onclick_##]" class="link_detail"
+                  >삭제</a
+                >
+              </header>
+
+              <div class="post">
+                <div>[##_article_rep_category_##]</div>
+                <h1>[##_article_rep_title_##]</h1>
+                [##_article_rep_desc_##]
+              </div>
+            </s_permalink_article_rep>
+          </s_article_rep>
         </div>
         <div class="item">
           <div class="search-wrap">
@@ -69,6 +92,42 @@
               placeholder="Search"
               value=""
             />
+          </div>
+
+          <s_sidebar>
+            <s_sidebar_element>
+              <nav class="categories">[##_category_list_##]</nav>
+            </s_sidebar_element>
+            <s_sidebar_element>
+              <!-- 공지사항 -->
+              <s_rct_notice>
+                <div class="notice">
+                  <div class="notice-title">공지사항</div>
+                  <ul>
+                    <s_rct_notice_rep>
+                      <li>
+                        <a href="[##_notice_rep_link_##]" class="notice-content"
+                          >[##_notice_rep_title_##]</a
+                        >
+                      </li>
+                    </s_rct_notice_rep>
+                  </ul>
+                </div>
+              </s_rct_notice>
+            </s_sidebar_element>
+          </s_sidebar>
+          <div class="visitor">
+            <div class="total-title">전체 방문자</div>
+            <div class="total-count">[##_count_total_##]</div>
+            <div class="visitor-count-wrap">
+              <div class="visitor-title">
+                오늘: <span class="visitor-count">[##_count_today_##]</span>
+              </div>
+              <div class="visitor-title">
+                어제:
+                <span class="visitor-count">[##_count_yesterday_##]</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

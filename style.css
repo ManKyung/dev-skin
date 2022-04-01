@@ -1,0 +1,442 @@
+@charset "utf-8";
+
+/*
+ *
+ * CSS CONTENTS:
+ *
+ * 01. Web Font
+ * 02. Type Selector Reset
+ * 03. Accessibility Navigation
+ * 04. Layout Selector
+ * 05. Components
+ * 06. Entry Content
+ * 07. Comment
+ * 08. Aside(sidebar)
+ * 09. ETC
+ * 10. Option(Color Type & List Type)
+ * 11. Retina Display
+ * 12. Media Screen
+ *
+ */
+
+/* Web Font Load */
+/* @import url('https://tistory2.daumcdn.net/tistory/5323807/skin/images/BMHANNAProOTF.otf'); */
+
+@font-face {
+  font-family: 'BMHanna_Air';
+  src: url('BMHANNAAir_otf.otf');
+}
+@font-face {
+  font-family: 'BMJua';
+  src: url('BMJUA_otf.otf');
+}
+@font-face {
+  font-family: 'BMHanna_Pro';
+  src: url('BMHANNAProOTF.otf');
+}
+/* Type Selector Reset */
+body {
+  font-family: 'BMHanna_Air', sans-serif;
+  font-size: 1rem;
+  color: white;
+  background: black;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+figure {
+  margin: 0;
+  padding: 0;
+}
+header,
+footer,
+section,
+article,
+aside,
+nav,
+hgroup,
+details,
+menu,
+figure,
+figcaption {
+  display: block;
+}
+button,
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+  overflow: visible;
+  cursor: pointer;
+}
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='submit'],
+textarea {
+  -webkit-appearance: none;
+}
+input,
+select,
+textarea,
+button {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 100%;
+  border-radius: 0;
+}
+button {
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+ul li {
+  list-style: none;
+}
+img,
+fieldset {
+  border: none;
+  vertical-align: top;
+}
+hr {
+  display: none;
+}
+a,
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #2ac1bc;
+}
+a:active {
+  text-decoration: none;
+}
+
+b,
+strong {
+  color: #2ac1bc;
+  font-family: 'BMJua';
+}
+
+.wrap {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.item:nth-child(1) {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.profile {
+  float: right;
+  margin-right: 20px;
+  max-width: 270px;
+  margin-top: 20px;
+  text-align: left;
+}
+.profile > img {
+  margin-right: 20px;
+  border-radius: 50%;
+  width: 100%;
+}
+
+.profile-info {
+  margin-top: 20px;
+}
+.profile-info > .title {
+  font-size: 2rem;
+}
+.profile-info > .description {
+  margin-top: 10px;
+  font-size: 1.4rem;
+}
+.profile > .btn {
+  margin-top: 20px;
+  border-radius: 10px;
+  color: #c9d1d9;
+  padding: 10px 0;
+  background-color: #21262d;
+  border-color: #f6fc1a;
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.profile > .link {
+  padding-top: 20px;
+}
+
+.link > .link-item {
+  margin-top: 10px;
+}
+
+.item:nth-child(2) {
+  flex: 2.5;
+  max-width: 900px;
+  border-right: 1px solid rgb(70, 70, 70);
+  border-left: 1px solid rgb(70, 70, 70);
+  height: 100%;
+}
+
+.item:nth-child(2) > header {
+  padding: 20px 40px;
+  border-bottom: 1px solid rgb(70, 70, 70);
+}
+.item:nth-child(2) > .post {
+  padding: 40px;
+}
+.item:nth-child(2) > .post > h1 {
+  font-size: 3rem;
+  color: #2ac1bc;
+  margin-bottom: 40px;
+}
+.item:nth-child(2) > .post > .contents_style > h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+.item:nth-child(2) > .post > .contents_style > h3 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+.item:nth-child(2) > .post > .contents_style > p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.item:nth-child(3) {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+
+.item:nth-child(3) > .search-wrap {
+  display: flex;
+  border: 1px solid rgba(230, 230, 230, 1);
+  border-radius: 20px;
+  width: 200px;
+}
+.search-wrap > .search-div {
+  display: inline-block;
+}
+.search-wrap > .search-icon {
+  padding: 7px 7px 6px 8px;
+  display: block;
+}
+.search-wrap > .search-input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  background: black;
+}
+
+.categories {
+  margin-top: 40px;
+  color: inherit;
+}
+.categories > ul > li > .link_tit {
+  font-size: 1.4rem;
+  color: rgb(204, 204, 204);
+}
+
+.category_list {
+  margin-top: 10px;
+}
+.category_list > li {
+  font-size: 1.4rem;
+}
+.sub_category_list {
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+.sub_category_list > li > a::before {
+  content: '-';
+  padding-left: 8px;
+}
+.sub_category_list > li {
+  margin-top: 6px;
+  font-size: 1rem;
+  color: rgb(204, 204, 204);
+}
+
+.notice {
+  margin-top: 40px;
+}
+.notice > .notice-title {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+.notice > .notice-content {
+  font-size: 1.1rem;
+  margin-top: 4px;
+  padding-left: 10px;
+}
+
+.visitor {
+  margin-top: 40px;
+}
+.visitor > .total-title {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+.visitor > .total-count {
+  font-size: 3rem;
+}
+.visitor > .visitor-count-wrap {
+  margin-top: 20px;
+}
+.visitor > .visitor-count-wrap > .visitor-title {
+  font-size: 1.1rem;
+  margin-top: 4px;
+}
+.visitor > .visitor-count-wrap > .visitor-count {
+  font-size: 1.2rem;
+}
+
+/* 모바일 가로 화면 */
+@media (max-width: 767.98px) {
+  .container {
+    flex-direction: column;
+  }
+  .item:nth-child(1) {
+    display: none;
+    height: 20px;
+    padding: 20px;
+    border-right: none;
+    border-bottom: 1px solid rgb(70, 70, 70);
+  }
+  .item:nth-child(3) {
+    border-left: none;
+    border-top: 1px solid rgb(70, 70, 70);
+    height: 100%;
+  }
+  /* 코드 작성 */
+}
+/* 태블릿(갤럭시 탭, 아이패드) 화면 */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* 코드 작성 */
+}
+/* PC 화면 1200px 이하 */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* 코드 작성 */
+}
+/* PC 화면 1200px 이상 1920px 이하 */
+@media (min-width: 1200px) and (max-width: 1919.99px) {
+  /* 코드 작성 */
+}
+/* PC 화면 1920px 이상 */
+@media (min-width: 1920px) {
+  /* 코드 작성 */
+}
+
+.hljs {
+  font-family: Menlo, Consolas, Monaco, monospace;
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+  color: #f0f0f0;
+  background: #001728;
+  margin-bottom: 20px;
+}
+.hljs-comment,
+.hljs-quote {
+  color: #888888;
+  font-style: italic;
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #dd6fdb;
+}
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+.hljs-literal {
+  color: #0184bb;
+}
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string {
+  color: #50a14f;
+}
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: #e4b654;
+}
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #b8820e;
+}
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong {
+  font-weight: bold;
+}
+.hljs-link {
+  text-decoration: underline;
+}
